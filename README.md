@@ -40,9 +40,9 @@ Installation
             - Open a terminal or command prompt.
             - Install `mido` and `python-rtmidi` by running the following commands:
              ```bash
-             pip install mido
-             pip install python-rtmidi
+             python3 -m pip install mido[ports-rtmidi]
              ```
+             If you encounter issues in this step refer to the [MIDO library documentation](https://mido.readthedocs.io/en/stable/installing.html).
         1) **Run the Script**:
           - Open a terminal or command prompt instance in the directory containing the script.
           - Execute the script with Python:
