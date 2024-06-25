@@ -33,11 +33,6 @@ class Elements(ElementsBase):
           "Encoders",
           element_factory=RealigningEncoderElement,
           map_mode=(MapMode.LinearBinaryOffset))
-        #self.add_encoder_matrix(
-        #    [[86, 87, 89, 90, 110, 111, 116, 117]],
-        #    "Encoders",
-        #    map_mode=(MapMode.LinearBinaryOffset)
-        #)
         self.add_element("Volume_Fader", EncoderElement, 14)
         self.add_element("Send_A_Fader", EncoderElement, 15)
         self.add_element("Send_B_Fader", EncoderElement, 30)
