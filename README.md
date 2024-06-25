@@ -1,10 +1,40 @@
-# MiniLab_3_Relative
-MIDI remote script and translation layer for the implementation of a "Relative DAW" mode for the Arturia MiniLab 3 controller in Ableton.
+# MiniLab 3 Relative
+Here it is provided a MIDI remote script and a translation layer for the implementation of a "Relative DAW" mode for the Arturia MiniLab 3 controller in Ableton.
 
-The **MiniLab_3_Rel** folder is a modified version of the official MIDI control script included in Ableton 12 for the MiniLab 3. It includes a modification in the elements.py module which tells Ableton to expect relative (LinearBinaryOffset) values from the MiniLab 3 knobs.
+The provided "DAW" mode in the MiniLab 3 implements the 8 infinite encoders as abolute knobs. This is a major downfall as when a knob mapping is changed (e.g. when switching tracks), moving the knob will result in the currently mapped parameter value *jumping* to the absolute value of the knob, which is far from ideal. Here I provide a workaround this issue using a modified *MIDI remote script* and a translation layer for the incoming MIDI signals from the Minilab 3.
 
-The **Rel_to_abs_translator** folder includes a python script and its executable (only for Apple M series machines) which intercept all messages comming from the MiniLab 3 and translates the values from the 8 encoders from abolute values to a relative ones.
+The `MiniLab_3_Rel` folder is a modified version of the official MIDI remote script included in Ableton 12 for the MiniLab 3. It includes a modification in the *elements.py* module which tells Ableton to expect relative values (*LinearBinaryOffset*) from the MiniLab 3 knobs.
 
-## Instructions
+The `Rel_to_abs_translator` folder includes a python script and its executable (only for Apple M series machines) which intercept all messages comming from the MiniLab 3 and translates the values from the 8 encoders from abolute to a relative ones.
 
-To be done...
+Installation
+------------
+
+1. Download the files in this repository.
+1.	Stop Live if it is running.
+1.	Add *MiniLab_3_Rel* to Ableton Live's MIDI Remote Scripts library
+
+	The folder `MiniLab_3_Rel` contains the MIDI Remote Script. To install it follow the [official Ableton's guide to install a third-party remote script](https://help.ableton.com/hc/en-us/articles/209072009-Installing-third-party-remote-scripts).
+1. Connect your MiniLab 3 to your computer.
+1.	Run the translation layer included in the 'Rel_to_abs_translator' folder. It can be executed in two ways (see below). In any case the message `Listening on Minilab3 MIDI and sending on Virtual Output..` indicates that it is successfully runing.
+    1) **Using the executable**
+       Convenient executable versions of the translator script are provided. These contain everything they need to run in the `_internal` folder and can be executed just by double-clicking. Currently it is only provided for M series apple machines.
+    1) **Running it from python**
+        1) **Install Python**:
+           - Download the installer from [python.org](https://www.python.org/downloads/). Follow the installation instructions for your operating system.
+        1) **Install Required Libraries**:
+            - Open a terminal or command prompt.
+            - Install `mido` and `python-rtmidi` by running the following commands:
+             ```bash
+             pip install mido
+             pip install python-rtmidi
+             ```
+        1) **Run the Script**:
+          - Open a terminal or command prompt instance in the directory containing the script.
+          - Execute the script with Python:
+              ```bash
+              python MiniLab_3_AbsToRelTranslator.py
+              ```
+1.	Open Live and enable **MiniLab 3 Relative** as a Control Surface
+
+	In Live’s Preferences go to the *Link, Tempo & MIDI* tab and select *MiniLab 3 Relative* in the dropdown list of available Control Surfaces. As MIDI Input select `Virtual Output`. As MIDI Output select `MiniLab3 (MIDI)`. In the *Input Ports* configuration the *Track* and *Remote* boxes should be unticked for the `MiniLab3` and ticked for the `Virtual Output`. *Takeover mode* can be set to None.
