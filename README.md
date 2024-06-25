@@ -19,7 +19,7 @@ Installation
 1.	Run the translation layer included in the `Rel_to_abs_translator` folder. It can be executed in two ways: using the executable or using python (see below). In any case, the message `Listening on Minilab3 MIDI and sending on Virtual Output..` indicates that it is successfully runing.
     1) **Using the executable**
        
-       Convenient executable version of the translator script is provided for M series Apple machines. It can be executed just by double-clicking on them. For this it is necesary to give execution permissions first:
+       Convenient executable version of the translator script is provided for M series Apple machines. It can be executed just by double-clicking on them. It might be necesary to give execution permissions in order to run it. If this is case:
     	- Open a terminal window in the directory containing the file, for example:
     	 	```bash
      		   cd /Users/YourUserName/Downloads/MiniLab_3_Relative/Rel_to_abs_translator/Executables/Apple_M
