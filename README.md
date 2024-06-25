@@ -18,8 +18,22 @@ Installation
 1. Connect your MiniLab 3 to your computer.
 1.	Run the translation layer included in the 'Rel_to_abs_translator' folder. It can be executed in two ways (see below). In any case the message `Listening on Minilab3 MIDI and sending on Virtual Output..` indicates that it is successfully runing.
     1) **Using the executable**
-       Convenient executable versions of the translator script are provided. These contain everything they need to run in the `_internal` folder and can be executed just by double-clicking. Currently it is only provided for M series apple machines.
+       
+       Convenient executable versions of the translator script are provided. These can be executed just by double-clicking on them. Currently it is only provided for M series apple machines. The first time it is necessary to make the file executable (refer to [Apple's terminal user guide](https://support.apple.com/guide/terminal/make-a-file-executable-apdd100908f-06b3-4e63-8a87-32e71241bab4/mac) for further info)
+    	- Open a terminal window in the directory containing the file, for example:
+    	 	```bash
+     		   cd /Users/YourUserName/Downloads/MiniLab_3_Relative/Rel_to_abs_translator/Executables/Apple_M
+       		```
+    	- Make it executable running the following command 
+			```bash
+     		chmod 755 MiniLab_3_AbsToRelTranslator
+     		```
+     	- From now on it can be executed by double clicking on it
+    
     1) **Running it from python**
+  
+       The source python script it is also provided `MiniLab_3_AbsToRelTranslator.py` which can be ran in any system with the appropiate python setup:
+       
         1) **Install Python**:
            - Download the installer from [python.org](https://www.python.org/downloads/). Follow the installation instructions for your operating system.
         1) **Install Required Libraries**:
@@ -35,7 +49,7 @@ Installation
               ```bash
               python3 MiniLab_3_AbsToRelTranslator.py
               ```
-        The details of the commands may vary depending on your system. If you encounter problems please refer to the [official guide](https://packaging.python.org/en/latest/tutorials/installing-packages/) for further suppont on installing the libraries.
+        The details of the commands may vary depending on your system. If you encounter problems please to the [official guide](https://packaging.python.org/en/latest/tutorials/installing-packages/) for further suppont on installing the libraries.
 1.	Open Live and enable **MiniLab 3 Rel** as a Control Surface
 
 	In Live’s Preferences go to the *Link, Tempo & MIDI* tab and select *MiniLab 3 Rel* in the dropdown list of available Control Surfaces. As MIDI Input select `Virtual Output`. As MIDI Output select `MiniLab3 (MIDI)`. In the *Input Ports* configuration the *Track* and *Remote* boxes should be unticked for the `MiniLab3` and ticked for the `Virtual Output`. *Takeover mode* can be set to None.
