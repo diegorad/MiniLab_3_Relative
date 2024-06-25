@@ -1,5 +1,5 @@
 # MiniLab 3 Relative
-Here it is provided a MIDI remote script and a translation layer for the implementation of a "Relative DAW" mode for the Arturia MiniLab 3 controller in Ableton.
+MIDI remote script and a translation layer for the implementation of a "Relative DAW" mode for the Arturia MiniLab 3 controller in Ableton.
 
 The provided "DAW" mode in the MiniLab 3 implements the 8 infinite encoders as abolute knobs. This is a major downfall as when a knob mapping is changed (e.g. when switching tracks), moving the knob will result in the currently mapped parameter value *jumping* to the absolute value of the knob, which is far from ideal. Here I provide a workaround this issue using a modified *MIDI remote script* and a translation layer for the incoming MIDI signals from the Minilab 3.
 
