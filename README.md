@@ -16,10 +16,10 @@ Installation
 
 	The folder `MiniLab_3_Rel` contains the MIDI Remote Script. To install it follow the [official Ableton's guide to install a third-party remote script](https://help.ableton.com/hc/en-us/articles/209072009-Installing-third-party-remote-scripts).
 1. Connect your **MiniLab 3** device to your computer using a USB cable.
-1.	Run the translation layer included in the 'Rel_to_abs_translator' folder. It can be executed in two ways (see below). In any case the message `Listening on Minilab3 MIDI and sending on Virtual Output..` indicates that it is successfully runing.
+1.	Run the translation layer included in the `Rel_to_abs_translator` folder. It can be executed in two ways: using the executable or using python (see below). In any case, the message `Listening on Minilab3 MIDI and sending on Virtual Output..` indicates that it is successfully runing.
     1) **Using the executable**
        
-       Convenient executable versions of the translator script are provided. These can be executed just by double-clicking on them. Currently it is only provided for M series apple machines. The first time it is necessary to make the file executable (refer to [Apple's terminal user guide](https://support.apple.com/guide/terminal/make-a-file-executable-apdd100908f-06b3-4e63-8a87-32e71241bab4/mac) for further info)
+       Convenient executable version of the translator script is provided for M series Apple machines. It can be executed just by double-clicking on them. For this it is necesary to give execution permissions first:
     	- Open a terminal window in the directory containing the file, for example:
     	 	```bash
      		   cd /Users/YourUserName/Downloads/MiniLab_3_Relative/Rel_to_abs_translator/Executables/Apple_M
@@ -29,6 +29,8 @@ Installation
      		chmod 755 MiniLab_3_AbsToRelTranslator
      		```
      	- From now on it can be executed by double clicking on it
+    	
+     	Refer to [Apple's terminal user guide](https://support.apple.com/guide/terminal/make-a-file-executable-apdd100908f-06b3-4e63-8a87-32e71241bab4/mac) for more info about this.
     
     1) **Running it from python**
   
