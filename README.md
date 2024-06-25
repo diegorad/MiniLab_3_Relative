@@ -32,7 +32,7 @@ Installation
     
     1) **Running it from python**
   
-       The source python script it is also provided `MiniLab_3_AbsToRelTranslator.py` which can be ran in any system with the appropiate python setup:
+       The source python script `MiniLab_3_AbsToRelTranslator.py` it is also provided. It can run in any system with the appropiate python setup:
        
         1) **Install Python**:
            - Download the installer from [python.org](https://www.python.org/downloads/). Follow the installation instructions for your operating system.
