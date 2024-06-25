@@ -19,18 +19,11 @@ Installation
 1.	Run the translation layer included in the `Rel_to_abs_translator` folder. It can be executed in two ways: using the executable or using python (see below). In any case, the message `Listening on Minilab3 MIDI and sending on Virtual Output..` indicates that it is successfully runing.
     1) **Using the executable**
        
-       Convenient executable version of the translator script is provided for M series Apple machines. It can be executed just by double-clicking on them. It might be necesary to give execution permissions in order to run it. If this is case:
-    	- Open a terminal window in the directory containing the file, for example:
-    	 	```bash
-     		   cd /Users/YourUserName/Downloads/MiniLab_3_Relative/Rel_to_abs_translator/Executables/Apple_M
-       		```
-    	- Make it executable running the following command 
-			```bash
-     		chmod 755 MiniLab_3_AbsToRelTranslator
-     		```
-     	- From now on it can be executed by double clicking on it
-    	
-     	Refer to [Apple's terminal user guide](https://support.apple.com/guide/terminal/make-a-file-executable-apdd100908f-06b3-4e63-8a87-32e71241bab4/mac) for more info about this.
+       Convenient executable version of the translator script is provided for M series Apple machines. It can be executed just by double-clicking on them.
+       
+       Potential issues:
+     	1)   It may be flagged as dangereous because it is an *unregistered* program. To solve this follow the instructions from this section of the [MacOs User Guide](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
+        2)    Or it might be necesary to give execution permissions in order to run it. If this is case refer to this [section](https://support.apple.com/guide/terminal/make-a-file-executable-apdd100908f-06b3-4e63-8a87-32e71241bab4/mac) of the MacOs manual:
     
     1) **Running it from python**
   
