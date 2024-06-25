@@ -15,7 +15,7 @@ Installation
 1.	Add *MiniLab_3_Rel* to Ableton Live's MIDI Remote Scripts library
 
 	The folder `MiniLab_3_Rel` contains the MIDI Remote Script. To install it follow the [official Ableton's guide to install a third-party remote script](https://help.ableton.com/hc/en-us/articles/209072009-Installing-third-party-remote-scripts).
-1. Connect your MiniLab 3 to your computer.
+1. Connect your **MiniLab 3** device to your computer.
 1.	Run the translation layer included in the 'Rel_to_abs_translator' folder. It can be executed in two ways (see below). In any case the message `Listening on Minilab3 MIDI and sending on Virtual Output..` indicates that it is successfully runing.
     1) **Using the executable**
        
