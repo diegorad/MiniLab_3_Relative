@@ -9,34 +9,42 @@ sensitivity = 4
 
 class MidiMessageHandler:
     def __init__(self):
-        self.previous_message = None
-        self.current_message = None
+        self.message_states = {}
 
     def handle_midi_message(self, message, output_port):
-        self.previous_message = self.current_message
-        self.current_message = message
-        
-        if self.current_message.type == 'control_change' and self.current_message.control in interceptList and hasattr(self.current_message, 'value'):
-            if self.previous_message is not None and self.previous_message.type == 'control_change' and hasattr(self.previous_message, 'value') and self.previous_message.control==self.previous_message.control:
-                if self.current_message.value > self.previous_message.value:
+        if message.type == 'control_change' and message.control in interceptList and hasattr(message, 'value'):
+            control_index = message.control
+            
+            if control_index not in self.message_states:
+                self.message_states[control_index] = {'previous_message': None, 'current_message': None}
+            
+            self.message_states[control_index]['previous_message'] = self.message_states[control_index]['current_message']
+            self.message_states[control_index]['current_message'] = message
+    
+            prev_msg = self.message_states[control_index]['previous_message']
+            curr_msg = self.message_states[control_index]['current_message']
+
+            if prev_msg is not None and prev_msg.type == 'control_change' and hasattr(prev_msg, 'value') and prev_msg.control == curr_msg.control:
+                if curr_msg.value > prev_msg.value:
                     offset = 1 * sensitivity
-                elif self.current_message.value < self.previous_message.value:
+                elif curr_msg.value < prev_msg.value:
                     offset = -1 * sensitivity
                 else:
-                    if self.current_message.value == 0:
+                    if curr_msg.value == 0:
                         offset = -1 * sensitivity
-                    elif self.current_message.value == 127:
+                    elif curr_msg.value == 127:
                         offset = 1 * sensitivity
                     else:
                         offset = 0
-        
+                        
                 relVal = 64 + offset
-                newMessage=message.copy(value = relVal, channel = 0)
+                newMessage = message.copy(value=relVal, channel=0)
             else:
-                newMessage=message.copy(value = 64)
+                newMessage = message.copy(value=64)
         else:
-            newMessage=message.copy()
-                    
+             newMessage = message.copy()
+                
+
         output_port.send(newMessage)
 
 def main():
