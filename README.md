@@ -14,4 +14,4 @@ Installation
 1. 	Connect your **MiniLab 3** device to your computer using a USB cable.
 1.	Open Live and enable **Minilab 3 notify** as a Control Surface
 
-	In Live’s Preferences go to the *Link, Tempo & MIDI* tab and select *MiniLab 3 Notify*from the dropdown list of available Control Surfaces. As MIDI Input select `MiniLab3 (MIDI)`. As MIDI Output select `MiniLab3 (MIDI)`. *Takeover mode* can be set to None.
+	In Live’s Preferences go to the *Link, Tempo & MIDI* tab and select *MiniLab 3 Notify* from the dropdown list of available Control Surfaces. As MIDI Input select `MiniLab3 (MIDI)`. As MIDI Output select `MiniLab3 (MIDI)`. *Takeover mode* can be set to None.
