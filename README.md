@@ -10,8 +10,8 @@ Installation
 1.	Stop Live if it is running.
 1.	Add *MiniLab_3_Notify* to Ableton Live's MIDI Remote Scripts library
 
-	The folder `MiniLab_3_Notify` contains the MIDI Remote Script. To install it follow the [official Ableton's guide to install a third-party remote script](https://help.ableton.com/hc/en-us/articles/209072009-Installing-third-party-remote-scripts).
+	The folder `Minilab_3_notify` contains the MIDI Remote Script. To install it follow the [official Ableton's guide to install a third-party remote script](https://help.ableton.com/hc/en-us/articles/209072009-Installing-third-party-remote-scripts).
 1. 	Connect your **MiniLab 3** device to your computer using a USB cable.
-1.	Open Live and enable **MiniLab 3 Notify** as a Control Surface
+1.	Open Live and enable **Minilab 3 notify** as a Control Surface
 
 	In Live’s Preferences go to the *Link, Tempo & MIDI* tab and select *MiniLab 3 Notify*from the dropdown list of available Control Surfaces. As MIDI Input select `MiniLab3 (MIDI)`. As MIDI Output select `MiniLab3 (MIDI)`. *Takeover mode* can be set to None.
