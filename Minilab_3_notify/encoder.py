@@ -46,7 +46,7 @@ class EncoderElement(EncoderElementBase):
         super().notify_parameter_value()
         self._send_parameter_feedback()
         
-        ##Modification by Diego Rad 29.04.2025
+        ##Modification by Diego Rad 29.04.2025##
         self._sysex_header = self._get_sysex_header()
         
         value_min = self.parameter.min
